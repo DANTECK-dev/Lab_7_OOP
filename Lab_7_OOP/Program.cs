@@ -35,14 +35,17 @@ namespace Lab_7_OOP
                 Name = "Иванов Иван Иванович",
                 Age = 45,
                 Educational_institution = "ООО ААА ООО",
-                School_direction = "Математическая школа"
+                School_direction = "Математическая школа",
+                Marks = new int?[] { 3, 5, 4, 6, 5, 4, 3 }
+
             });
             list.Add(new Student()
             {
                 Name = "Иванов Иван Иванович",
                 Age = 45,
                 Educational_institution = "ООО ААА ООО",
-                Specialization = "Адвокат"
+                Specialization = "Адвокат",
+                Marks = new int?[] { 3, 5, 5, 4, 3 }
             });
             for (int i = 0; i < list.Count; i++)
                 Console.WriteLine(list[i].ToString());

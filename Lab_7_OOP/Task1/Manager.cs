@@ -14,12 +14,17 @@ namespace Lab_7_OOP
             get { return department; }
             set { if (value != null) department = value; }
         }
+        public override int Calc_Salary()
+        {
+            double period_of_service = this.ExpYY > 20 ? 0.20 : this.ExpYY * 0.01;
+            return (int)Math.Round(period_of_service * this.Salary + this.Salary);
+        }
         public override string ToString()
         {
             return "Руководитель: Имя - " + this.Name 
-                + " возвраст - " + this.Age 
-                + " компания - " + this.Company
-                + " отдел - " + Department;
+                + " | возвраст - " + this.Age 
+                + " | компания - " + this.Company
+                + " | отдел - " + this.Department;
         }
     }
 }
