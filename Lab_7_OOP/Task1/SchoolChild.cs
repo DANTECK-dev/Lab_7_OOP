@@ -14,10 +14,12 @@ namespace Lab_7_OOP
             get => marks;
             set
             {
+                int j = 0;
                 for (int i = 0; i < marks.Length; i++)
                 {
-                    if (value.Length <= i) marks[i] = null;
-                    else marks[i] = value[i];
+                    if (value.Length <= i) marks[j] = null;
+                    else if (value[i] < 6 && value[i] > 0) { marks[j] = value[i]; j++; }
+                    else continue;
                 }
             }
         }
@@ -27,12 +29,9 @@ namespace Lab_7_OOP
             get
             {
                 for(int i = 0; i < marks.Length; i++)
-                    if (marks[i] == null)
-                    {
+                    if (marks[i] != null)
                         cur_class = i+1;
-                        return cur_class;
-                    }
-                return 1;
+                return ++cur_class;
             }
         }
         private int next_mark;
@@ -68,12 +67,12 @@ namespace Lab_7_OOP
             for (int i = 0; i < this.Marks.Length; i++)
                 marks += this.Marks[i] + " ";
             return "Школьник: Имя - " + this.Name
-                + " | возвраст - " + this.Age
-                + " | учебное учреждение - " + this.Educational_institution
-                + " | направление школы - " + this.School_direction
-                + " | оценки - " + marks
-                + " | прогноз оценики - " + this.Next_Mark
-                + " | текущий класс - " + this.Cur_Class;
+                + "\n возвраст - " + this.Age
+                + "\n учебное учреждение - " + this.Educational_institution
+                + "\n направление школы - " + this.School_direction
+                + "\n оценки - " + marks
+                + "\n прогноз оценики - " + this.Next_Mark
+                + "\n текущий класс - " + this.Cur_Class + "\n";
         }
 
     }

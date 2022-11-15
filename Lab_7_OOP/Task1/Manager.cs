@@ -22,9 +22,9 @@ namespace Lab_7_OOP
         public override string ToString()
         {
             return "Руководитель: Имя - " + this.Name 
-                + " | возвраст - " + this.Age 
-                + " | компания - " + this.Company
-                + " | отдел - " + this.Department;
+                + "\n возвраст - " + this.Age 
+                + "\n компания - " + this.Company
+                + "\n отдел - " + this.Department + "\n";
         }
     }
 }

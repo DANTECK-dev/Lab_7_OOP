@@ -32,17 +32,18 @@ namespace Lab_7_OOP
             set { if (value > 18) base.Age = value; }
         }
 
-        public void Print_Salary(Employee[] employees)
+        static public void Print_Salary(List<Employee> employees)
         {
             foreach (var employee in employees)
                 Console.WriteLine
                     (
-                        "Работник: Имя - " + this.Name
-                        + " возвраст - " + this.Age
-                        + " компания - " + this.Company
-                        + " Стаж - " + this.ExpYY + " лет"
-                        + " Зарплата - " + this.Calc_Salary()
+                        "Имя - " + employee.Name
+                        + " возвраст - " + employee.Age
+                        + " компания - " + employee.Company
+                        + " Стаж - " + employee.ExpYY + " лет"
+                        + " Зарплата - " + employee.Calc_Salary()
                     );
+            Console.WriteLine();
         }
         abstract public int Calc_Salary();
         abstract public override string ToString();

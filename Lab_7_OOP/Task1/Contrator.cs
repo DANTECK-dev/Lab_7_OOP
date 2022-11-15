@@ -32,9 +32,9 @@ namespace Lab_7_OOP
         public override string ToString()
         {
             return "Исполнитель: Имя - " + this.Name
-                + " | возвраст - " + this.Age
-                + " | компания - " + this.Company
-                + " | задача - " + this.Tasks;
+                + "\n возвраст - " + this.Age
+                + "\n компания - " + this.Company
+                + "\n задача - " + this.Tasks + "\n";
         }
     }
 }

@@ -43,15 +43,14 @@ namespace Lab_7_OOP
             get
             {
                 for (int i = 0; i < marks.Length; i++)
-                    if (marks[i] == null)
+                    if (marks[i] != null)
                     {
                         if((i+1)%2 == 0)
-                            cur_semestr = (i + 1) / 2;
+                            cur_semestr = (i) / 2;
                         else
-                            cur_semestr = (i + 2) / 2;
-                        return cur_semestr;
+                            cur_semestr = (i + 1) / 2;
                     }
-                return 1;
+                return ++cur_semestr;
             }
         }
         private string specialization;
@@ -71,12 +70,12 @@ namespace Lab_7_OOP
             for (int i = 0; i < this.Marks.Length; i++)
                 marks += this.Marks[i] + " ";
             return "Студент: Имя - " + this.Name
-                + " | возвраст - " + this.Age
-                + " | учебное учреждение - " + this.Educational_institution
-                + " | специализация - " + this.Specialization
-                + " | оценки - " + marks
-                + " | прогноз оценки - " + this.Next_Mark
-                + " | текущий семестр - " + this.Cur_Semestr;
+                + "\n возвраст - " + this.Age
+                + "\n учебное учреждение - " + this.Educational_institution
+                + "\n специализация - " + this.Specialization
+                + "\n оценки - " + marks
+                + "\n прогноз оценки - " + this.Next_Mark
+                + "\n текущий курс - " + this.Cur_Semestr + "\n";
         }
     }
 }
