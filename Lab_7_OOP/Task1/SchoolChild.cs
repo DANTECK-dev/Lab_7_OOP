@@ -47,7 +47,7 @@ namespace Lab_7_OOP
                     summ += (int)marks[i];
                     count = i+1;
                 }
-                return (int)summ / count; ;
+                return (int)summ / count;
             }
         }
         private string school_direction;
