@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lab_7_OOP.Classes;
 
 namespace Lab_7_OOP
 {
@@ -39,15 +35,8 @@ namespace Lab_7_OOP
         {
             get
             {
-                int summ = 0;
-                int count = 0;
-                for (int i = 0; i < marks.Length; i++)
-                {
-                    if (marks[i] == null) break;
-                    summ += (int)marks[i];
-                    count = i+1;
-                }
-                return (int)summ / count;
+                next_mark = GeneralizedClass<SchoolChild>.Forecast(marks);
+                return next_mark;
             }
         }
         private string school_direction;

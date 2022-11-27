@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lab_7_OOP.Classes;
 
 namespace Lab_7_OOP
 {
@@ -18,14 +14,6 @@ namespace Lab_7_OOP
         {
             get => base.Age;
             set { if (value < 40 && value > 6) base.Age = value; }
-        }
-        static public Learner Get(List<Learner> learners, int index)
-        {
-            return learners[index];
-        }
-        static public void Print(List<Learner> learners)
-        {
-            learners.ForEach(x => Console.WriteLine(x.ToString()));
         }
         abstract public override string ToString();
     }

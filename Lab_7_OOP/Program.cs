@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lab_7_OOP.Classes;
 
 namespace Lab_7_OOP
 {
@@ -133,7 +129,7 @@ namespace Lab_7_OOP
                 Specialization = "Адвокат",
                 Marks = new int?[] { 3, 5, 5, 2, 2, 4, 3 }
             });
-            Learner.Print(list);
+            GeneralizedClass<Student>.Print(list);
             Console.ReadKey();
             return;
         }
